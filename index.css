@@ -27,7 +27,7 @@ body {
     #ticketButton {
       display: inline-block;
       padding: 10px 20px;
-      background: #ff6600;
+      background: red;
       color: white;
       text-decoration: none;
       margin-top: 15px;

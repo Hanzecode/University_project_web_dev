@@ -7,7 +7,17 @@
    <link rel="stylesheet" href="schedule.css">
 </head>
 <body>
-    <h2>Festival Date</h2>
+    <header>
+        <h1>Festival Date</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lineup.html">Lineup</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="schedule.html">Schedule</a>
+    </nav>
+    <main>
     <section>
         <div>
             <button id="showAll">All</button>
@@ -21,7 +31,6 @@
                     <th scope="col">Day</th>
                     <th scope="col">Time slot</th>
                     <th scope="col">Artists</th>
-                    <th scope="col">Stages</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,41 +38,35 @@
                     <td>Day 1</td>
                     <td>20:00-20:45</td>
                     <td>Justine Bieber</td>
-                    <td>Main Stage</td>
                 </tr>
                 <tr class="day1">
                     <td>Day 1</td>
                     <td>21:00-21:45</td>
                     <td>The Weekend</td>
-                    <td>Main Stage</td>
 
                 <tr class="day1">
                     <td>Day 1</td>
                     <td>22:00-22:45</td>
                     <td>Thorfin</td>
-                    <td>Main Stage</td>
 
                 <tr class="day2">
                     <td>Day 2</td>
                     <td>20:00-20:45</td>
                     <td>Finn</td>
-                    <td>Main Stage</td>
                 </tr>
                 <tr class="day2">
                     <td>Day 2</td>
                     <td>21:00-21:45</td>
                     <td>Jake</td>
-                    <td>Main Stage</td>
                 </tr>
                 <tr class="day2">
                     <td>Day 2</td>
                     <td>22:00-22:45</td>
                     <td>Kira</td>
-                    <td>Main Stage</td>
             </tbody>
         </table>
     </section>
-
+    </main>
     <script>
         const day1 = document.querySelectorAll(".day1")
         const day2 = document.querySelectorAll(".day2")
