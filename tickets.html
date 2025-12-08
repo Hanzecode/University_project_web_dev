@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tickets.css">
+</head>
+<body>
+    <main>
+        <h2>Tickets are available here</h2>
+        <form action="">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets" min="1" max="10" required><br><br>
+
+            <label for="type">Ticket Type:</label>
+            <select name="type" id="type">
+                <option>General Admission ticket</option>
+                <option>VIP ticket</option>
+                <option>Premium ticket</option>
+            </select><br><br>
+
+            <fieldset>
+                <legend>Payment Method</legend>
+                <label>
+                    <input type="radio" name="payment" value="Credit Card" required>
+                    Credit Card
+                    <img src="card.png" alt="PayPal Logo" style="width: 160px; height:auto;">
+                </label><br>
+                <label>
+                    <input type="radio" name="payment" value="Debit Card">
+                    Debit Card
+                    <img src="card.png" alt="PayPal Logo" style="width: 160px; height:auto;">
+                </label><br>
+                <label>
+                    <input type="radio" name="payment" value="PayPal">PayPal
+                    <img src="paypal.jpeg" alt="PayPal Logo" style="width:40px; height:auto;">
+                </label><br>
+            </fieldset><br><br>
+
+            <label for="special">Special Requirements:</label>
+            <textarea name="special" id="special">You must be a University of Leicester student</textarea><br><br>
+
+            <label for="terms">Term and Condition</label>
+            <input type="checkbox" id = "terms" name="terms" required><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </main>
+</body>
+</html>

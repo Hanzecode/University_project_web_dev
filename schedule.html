@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+    <h2>Festival Date</h2>
+    <section>
+        <div>
+            <button id="showAll">All</button>
+            <button id="showDay1">Day 1</button>
+            <button id="showDay2">Day 2</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Time slot</th>
+                    <th scope="col">Artists</th>
+                    <th scope="col">Stages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="day1">
+                    <td>Day 1</td>
+                    <td>20:00-20:45</td>
+                    <td>Justine Bieber</td>
+                    <td>Main Stage</td>
+                </tr>
+                <tr class="day1">
+                    <td>Day 1</td>
+                    <td>21:00-21:45</td>
+                    <td>The Weekend</td>
+                    <td>Main Stage</td>
+
+                <tr class="day1">
+                    <td>Day 1</td>
+                    <td>22:00-22:45</td>
+                    <td>Thorfin</td>
+                    <td>Main Stage</td>
+
+                <tr class="day2">
+                    <td>Day 2</td>
+                    <td>20:00-20:45</td>
+                    <td>Finn</td>
+                    <td>Main Stage</td>
+                </tr>
+                <tr class="day2">
+                    <td>Day 2</td>
+                    <td>21:00-21:45</td>
+                    <td>Jake</td>
+                    <td>Main Stage</td>
+                </tr>
+                <tr class="day2">
+                    <td>Day 2</td>
+                    <td>22:00-22:45</td>
+                    <td>Kira</td>
+                    <td>Main Stage</td>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        const day1 = document.querySelectorAll(".day1")
+        const day2 = document.querySelectorAll(".day2")
+
+        document.getElementById("showAll").onclick = function(){
+            day1.forEach(row => row.style.display = "");
+            day2.forEach(row => row.style.display = "");
+        };
+
+        document.getElementById("showDay1").onclick = function () {
+            day1.forEach(row => row.style.display = "");
+            day2.forEach(row => row.style.display = "none");
+        };
+
+        document.getElementById("showDay2").onclick = function () {
+            day1.forEach(row => row.style.display = "none");
+            day2.forEach(row => row.style.display = "");
+        };
+        
+    </script>
+    
+</body>
+</html>
