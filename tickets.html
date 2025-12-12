@@ -4,34 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Festival</title>
+
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="tickets.css">
 </head>
 <body>
+
+    <!-- Page Header -->
     <header>
-        <h1>Tickets are available here</h1>
+        <h1 id="head_text">Tickets are available here</h1>
     </header>
 
+
+    <!-- Navigation bar -->
     <nav>
         <a href="index.html">Home</a>
         <a href="lineup.html">Lineup</a>
         <a href="tickets.html">Tickets</a>
         <a href="schedule.html">Schedule</a>
     </nav>
+
+
+    <!-- Ticket options section -->
+    <div class="ticket-container">
+
+        <!-- General Admission ticket info -->
+        <div class="ticket-box">
+            <h2>General Admission</h2>
+            <p class="ticket-desc">Basic entry to the event</p>
+            <div class="ticket-price">$20</div>
+        </div>
+
+        <!-- VIP ticket info -->
+        <div class="ticket-box">
+            <h2>VIP Ticket</h2>
+            <p class="ticket-desc">VIP seating + early access</p>
+            <div class="ticket-price">$50</div>
+        </div>
+
+        <!-- Premium ticket info -->
+        <div class="ticket-box">
+            <h2>Premium Ticket</h2>
+            <p class="ticket-desc">All VIP perks + meet & greet</p>
+            <div class="ticket-price">$80</div>
+        </div>
+
+    </div><br><br>
     
+    <!-- Main section containing the form -->
     <main>
+        
+        <!-- Ticket purchase form -->
         <form action="">
+
+            <!-- Full name input -->
             <label for="fullname">Full Name:</label>
             <input type="text" id="fullname" name="fullname" required><br><br>
 
+            <!-- Email input -->
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required><br><br>
 
+            <!-- Phone number input -->
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required><br><br>
 
+            <!-- Number of tickets -->
             <label for="tickets">Number of Tickets:</label>
             <input type="number" id="tickets" name="tickets" min="1" max="10" required><br><br>
 
+            <!-- Ticket dropdown options -->
             <label for="type">Ticket Type:</label>
             <select name="type" id="type">
                 <option>General Admission ticket</option>
@@ -39,33 +81,48 @@
                 <option>Premium ticket</option>
             </select><br><br>
 
+            <!-- Payment method options -->
             <fieldset>
                 <legend>Payment Method</legend>
+
+                <!-- Credit card option -->
                 <label>
                     <input type="radio" name="payment" value="Credit Card" required>
                     Credit Card
                     <img src="card.png" alt="PayPal Logo" style="width: 160px; height:auto;">
                 </label><br>
+
+                <!-- Debit card option -->
                 <label>
                     <input type="radio" name="payment" value="Debit Card">
                     Debit Card
                     <img src="card.png" alt="PayPal Logo" style="width: 160px; height:auto;">
                 </label><br>
+
+                <!-- PayPal option -->
                 <label>
                     <input type="radio" name="payment" value="PayPal">PayPal
                     <img src="paypal.jpeg" alt="PayPal Logo" style="width:40px; height:auto;">
                 </label><br>
             </fieldset><br><br>
 
+            <!-- Special requirements text area -->
             <label for="special">Special Requirements:</label>
             <textarea name="special" id="special">You must be a University of Leicester student</textarea><br><br>
 
+            <!-- Terms and conditions checkbox -->
             <label for="terms">Term and Condition</label>
             <input type="checkbox" id = "terms" name="terms" required><br><br>
 
+            <!-- Form buttons -->
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
         </form>
     </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 University End of the year festi. All rights reserved.</p>
+    </footer>
 </body>
 </html>

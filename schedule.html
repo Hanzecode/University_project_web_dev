@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Festival</title>
+
+    <!-- Link to external CSS file for styling -->
    <link rel="stylesheet" href="schedule.css">
 </head>
 <body>
+
+    <!-- Header-->
     <header>
-        <h1>Festival Date</h1>
+        <h1 id="head_text">Festival Date</h1>
     </header>
 
+    <!-- Navigation menu -->
     <nav>
         <a href="index.html">Home</a>
         <a href="lineup.html">Lineup</a>
@@ -19,13 +24,19 @@
     </nav>
     <main>
     <section>
+
+        <!-- Filter buttons to show all, day 1, or day 2 schedules -->
         <div>
             <button id="showAll">All</button>
             <button id="showDay1">Day 1</button>
             <button id="showDay2">Day 2</button>
         </div>
 
+
+        <!-- Schedule table -->
         <table>
+
+            <!-- Table header -->
             <thead>
                 <tr>
                     <th scope="col">Day</th>
@@ -34,6 +45,8 @@
                     <th scope="col">Stage</th>
                 </tr>
             </thead>
+
+            <!-- Day 1 performances -->
             <tbody>
                 <tr class="day1">
                     <td>Day 1</td>
@@ -54,6 +67,7 @@
                     <td>Thorfin</td>
                     <td>Stage3</td>
 
+                <!-- Day 2 performances -->
                 <tr class="day2">
                     <td>Day 2</td>
                     <td>20:00-20:45</td>
@@ -78,20 +92,26 @@
         </table>
     </section>
     </main>
+
+  
+    <!-- JavaScript to filter table rows based on selected day -->
     <script>
         const day1 = document.querySelectorAll(".day1")
         const day2 = document.querySelectorAll(".day2")
 
+        // Show all rows
         document.getElementById("showAll").onclick = function(){
             day1.forEach(row => row.style.display = "");
             day2.forEach(row => row.style.display = "");
         };
 
+        // Show only Day1 rows
         document.getElementById("showDay1").onclick = function () {
             day1.forEach(row => row.style.display = "");
             day2.forEach(row => row.style.display = "none");
         };
 
+        // Show only Day2 rows
         document.getElementById("showDay2").onclick = function () {
             day1.forEach(row => row.style.display = "none");
             day2.forEach(row => row.style.display = "");
@@ -99,5 +119,9 @@
         
     </script>
     
+      <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 University End of the year festi. All rights reserved.</p>
+    </footer>
 </body>
 </html>
